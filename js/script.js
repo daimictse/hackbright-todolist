@@ -28,7 +28,9 @@ $(document).ready(function() {
 		});
 	});
 
-	$('#populate-list-button').one('click', function() {
+// or just move ajax to the top
+// or put ajax to a function, and call it right away
+	$('#populate-list-button').load('index.html', {limit:1}, function() {
 		$.ajax({
 			url: 'test.json',
 			type: "GET",
